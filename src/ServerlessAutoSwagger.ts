@@ -40,6 +40,9 @@ class ServerlessAutoSwagger {
 
         this.registerOptions();
 
+        swagger.schemes = [options.stage !== 'myenv' ?'https' : 'http'];
+        swagger.basePath = '/'+options.stage,
+
         this.commands = {
             'generate-swagger': {
                 usage: 'Generates Swagger for your API',

@@ -130,7 +130,9 @@ export interface ServerlessOutputs {
     };
 }
 
-export interface ServerlessOptions {}
+export interface ServerlessOptions {
+    stage : string;
+}
 
 export interface ServerlessCommand {
     lifecycleEvents: string[];
